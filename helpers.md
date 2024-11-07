@@ -322,7 +322,7 @@ as a string.
 
 ```ts
 client.chat.completions.runTools({
-  model: 'gpt-3.5-turbo',
+  model: 'GigaChat-Pro',
   messages: [{ role: 'user', content: 'How is the weather this week?' }],
   tools: [
     {
@@ -562,7 +562,7 @@ const client = new GigaChat();
 async function main() {
   const runner = client.chat.completions
     .runTools({
-      model: 'gpt-3.5-turbo',
+      model: 'GigaChat-Pro',
       messages: [{ role: 'user', content: "How's the weather this week in Los Angeles?" }],
       tools: [
         {
@@ -600,7 +600,7 @@ const client = new GigaChat();
 async function main() {
   const runner = client.chat.completions
     .runTools({
-      model: 'gpt-3.5-turbo',
+      model: 'GigaChat-Pro',
       messages: [{ role: 'user', content: "How's the weather this week in Los Angeles?" }],
       tools: [
         {

@@ -57,7 +57,7 @@ expect.extend({
 
 it(`streaming works`, async function () {
   const stream = await client.chat.completions.create({
-    model: 'gpt-4',
+    model: 'GigaChat-Pro',
     messages: [{ role: 'user', content: 'Say this is a test' }],
     stream: true,
   });
@@ -79,7 +79,7 @@ it(`ChatCompletionStream works`, async function () {
 
   const stream = client.beta.chat.completions
     .stream({
-      model: 'gpt-4',
+      model: 'GigaChat-Pro',
       messages: [{ role: 'user', content: 'Say this is a test' }],
     })
     .on('chunk', (chunk) => chunks.push(chunk))
@@ -124,7 +124,7 @@ it(`aborting ChatCompletionStream works`, async function () {
   const stream = client.beta.chat.completions
     .stream(
       {
-        model: 'gpt-4',
+        model: 'GigaChat-Pro',
         messages: [{ role: 'user', content: 'Say this is a test' }],
       },
       { signal: controller.signal },

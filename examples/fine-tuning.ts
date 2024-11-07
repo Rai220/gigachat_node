@@ -40,7 +40,7 @@ async function main() {
   console.log('-----');
 
   console.log(`Starting fine-tuning`);
-  let fineTune = await client.fineTuning.jobs.create({ model: 'gpt-3.5-turbo', training_file: file.id });
+  let fineTune = await client.fineTuning.jobs.create({ model: 'GigaChat-Pro', training_file: file.id });
   console.log(`Fine-tuning ID: ${fineTune.id}`);
 
   console.log('-----');

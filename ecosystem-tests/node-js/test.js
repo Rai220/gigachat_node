@@ -14,7 +14,7 @@ function assertEqual(actual, expected) {
 
 async function main() {
   const completion = await gigachat.chat.completions.create({
-    model: 'gpt-4',
+    model: 'GigaChat-Pro',
     messages: [{ role: 'user', content: 'Say this is a test' }],
   });
   if (!completion.choices[0].message.content) {

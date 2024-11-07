@@ -124,7 +124,7 @@ describe('resource runs', () => {
       max_completion_tokens: 256,
       max_prompt_tokens: 256,
       metadata: {},
-      model: 'gpt-4o',
+      model: 'GigaChat-Pro',
       parallel_tool_calls: true,
       response_format: 'auto',
       stream: false,

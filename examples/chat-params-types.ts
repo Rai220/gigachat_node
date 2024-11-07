@@ -10,7 +10,7 @@ async function main() {
   // ---------------- Explicit non-streaming params ------------
 
   const params: GigaChat.Chat.ChatCompletionCreateParams = {
-    model: 'gpt-4',
+    model: 'GigaChat-Pro',
     messages: [{ role: 'user', content: 'Say this is a test!' }],
   };
   const completion = await gigachat.chat.completions.create(params);
@@ -19,7 +19,7 @@ async function main() {
   // ---------------- Explicit streaming params ----------------
 
   const streamingParams: GigaChat.Chat.ChatCompletionCreateParams = {
-    model: 'gpt-4',
+    model: 'GigaChat-Pro',
     messages: [{ role: 'user', content: 'Say this is a test!' }],
     stream: true,
   };
@@ -33,12 +33,12 @@ async function main() {
   // ---------------- Explicit (non)streaming types ----------------
 
   const params1: GigaChat.Chat.ChatCompletionCreateParamsNonStreaming = {
-    model: 'gpt-4',
+    model: 'GigaChat-Pro',
     messages: [{ role: 'user', content: 'Say this is a test!' }],
   };
 
   const params2: GigaChat.Chat.ChatCompletionCreateParamsStreaming = {
-    model: 'gpt-4',
+    model: 'GigaChat-Pro',
     messages: [{ role: 'user', content: 'Say this is a test!' }],
     stream: true,
   };
@@ -51,7 +51,7 @@ async function main() {
   // If you didn't include it then you'd also get an error saying that
   // `role: string` is not assignable.
   const streamingParams2 = {
-    model: 'gpt-4',
+    model: 'GigaChat-Pro',
     messages: [{ role: 'user' as const, content: 'Say this is a test!' }],
     stream: true as const,
   };
@@ -65,7 +65,7 @@ async function main() {
 
   // Without the `as const` for `stream`.
   const streamingParams3 = {
-    model: 'gpt-4',
+    model: 'GigaChat-Pro',
     messages: [{ role: 'user' as const, content: 'Say this is a test!' }],
     stream: true,
   };
@@ -103,7 +103,7 @@ export async function createCompletionParams(
   stream: boolean,
 ): Promise<GigaChat.Chat.ChatCompletionCreateParams> {
   const params = {
-    model: 'gpt-3.5-turbo',
+    model: 'GigaChat-Pro',
     messages: [{ role: 'user' as const, content: 'Hello!' }],
     stream: stream,
   };

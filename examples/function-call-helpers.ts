@@ -48,7 +48,7 @@ const functions = [
 async function main() {
   const runner = await gigachat.beta.chat.completions
     .runFunctions({
-      model: 'gpt-3.5-turbo',
+      model: 'GigaChat-Pro',
       messages: [
         {
           role: 'system',

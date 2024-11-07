@@ -344,7 +344,7 @@ function _typeTests() {
     messages: [
       { role: 'user', content: 'can you tell me how many properties are in {"a": 1, "b": 2, "c": 3}' },
     ],
-    model: 'gpt-3.5-turbo',
+    model: 'GigaChat-Pro',
     tools: [
       {
         type: 'function',
@@ -385,7 +385,7 @@ function _typeTests() {
     messages: [
       { role: 'user', content: 'can you tell me how many properties are in {"a": 1, "b": 2, "c": 3}' },
     ],
-    model: 'gpt-3.5-turbo',
+    model: 'GigaChat-Pro',
     tools: [
       new ParsingToolFunction({
         name: 'numProperties',
@@ -401,7 +401,7 @@ function _typeTests() {
     messages: [
       { role: 'user', content: 'can you tell me how many properties are in {"a": 1, "b": 2, "c": 3}' },
     ],
-    model: 'gpt-3.5-turbo',
+    model: 'GigaChat-Pro',
     tools: [
       new ParsingToolFunction({
         name: 'numProperties',
@@ -443,7 +443,7 @@ function _typeTests() {
     messages: [
       { role: 'user', content: 'can you tell me how many properties are in {"a": 1, "b": 2, "c": 3}' },
     ],
-    model: 'gpt-3.5-turbo',
+    model: 'GigaChat-Pro',
     // @ts-ignore error occurs here in TS 4
     tools: [
       {
@@ -503,7 +503,7 @@ describe('resource completions', () => {
 
       const runner = gigachat.beta.chat.completions.runTools({
         messages: [{ role: 'user', content: 'tell me what the weather is like' }],
-        model: 'gpt-3.5-turbo',
+        model: 'GigaChat-Pro',
         tools: [
           {
             type: 'function',
@@ -547,7 +547,7 @@ describe('resource completions', () => {
             },
           ],
           created: Math.floor(Date.now() / 1000),
-          model: 'gpt-3.5-turbo',
+          model: 'GigaChat-Pro',
           object: 'chat.completion',
         };
       });
@@ -597,7 +597,7 @@ describe('resource completions', () => {
             },
           ],
           created: Math.floor(Date.now() / 1000),
-          model: 'gpt-3.5-turbo',
+          model: 'GigaChat-Pro',
           object: 'chat.completion',
         };
       });
@@ -643,7 +643,7 @@ describe('resource completions', () => {
       const runner = gigachat.beta.chat.completions.runTools(
         {
           messages: [{ role: 'user', content: 'tell me what the weather is like' }],
-          model: 'gpt-3.5-turbo',
+          model: 'GigaChat-Pro',
           tools: [
             {
               type: 'function',
@@ -689,7 +689,7 @@ describe('resource completions', () => {
             },
           ],
           created: Math.floor(Date.now() / 1000),
-          model: 'gpt-3.5-turbo',
+          model: 'GigaChat-Pro',
           object: 'chat.completion',
         };
       });
@@ -734,7 +734,7 @@ describe('resource completions', () => {
             content: 'can you tell me how many properties are in {"a": 1, "b": 2, "c": 3}',
           },
         ],
-        model: 'gpt-3.5-turbo',
+        model: 'GigaChat-Pro',
         tools: [
           new ParsingToolFunction({
             name: 'numProperties',
@@ -786,7 +786,7 @@ describe('resource completions', () => {
             },
           ],
           created: Math.floor(Date.now() / 1000),
-          model: 'gpt-3.5-turbo',
+          model: 'GigaChat-Pro',
           object: 'chat.completion',
           usage: {
             completion_tokens: 5,
@@ -840,7 +840,7 @@ describe('resource completions', () => {
             },
           ],
           created: Math.floor(Date.now() / 1000),
-          model: 'gpt-3.5-turbo',
+          model: 'GigaChat-Pro',
           object: 'chat.completion',
           usage: {
             completion_tokens: 10,
@@ -894,7 +894,7 @@ describe('resource completions', () => {
             content: 'can you tell me how many properties are in {"a": 1, "b": 2, "c": 3}',
           },
         ],
-        model: 'gpt-3.5-turbo',
+        model: 'GigaChat-Pro',
         tools: [
           new ParsingToolFunction({
             name: 'numProperties',
@@ -947,7 +947,7 @@ describe('resource completions', () => {
               },
             ],
             created: Math.floor(Date.now() / 1000),
-            model: 'gpt-3.5-turbo',
+            model: 'GigaChat-Pro',
             object: 'chat.completion',
           };
         }),
@@ -1006,7 +1006,7 @@ describe('resource completions', () => {
               },
             ],
             created: Math.floor(Date.now() / 1000),
-            model: 'gpt-3.5-turbo',
+            model: 'GigaChat-Pro',
             object: 'chat.completion',
           };
         }),
@@ -1076,7 +1076,7 @@ describe('resource completions', () => {
               },
             ],
             created: Math.floor(Date.now() / 1000),
-            model: 'gpt-3.5-turbo',
+            model: 'GigaChat-Pro',
             object: 'chat.completion',
           };
         }),
@@ -1138,7 +1138,7 @@ describe('resource completions', () => {
 
       const runner = gigachat.beta.chat.completions.runTools({
         messages: [{ role: 'user', content: 'tell me what the weather is like' }],
-        model: 'gpt-3.5-turbo',
+        model: 'GigaChat-Pro',
         tool_choice: {
           type: 'function',
           function: {
@@ -1189,7 +1189,7 @@ describe('resource completions', () => {
               },
             ],
             created: Math.floor(Date.now() / 1000),
-            model: 'gpt-3.5-turbo',
+            model: 'GigaChat-Pro',
             object: 'chat.completion',
           };
         }),
@@ -1226,7 +1226,7 @@ describe('resource completions', () => {
 
       const runner = gigachat.beta.chat.completions.runTools({
         messages: [{ role: 'user', content: 'tell me what the weather is like' }],
-        model: 'gpt-3.5-turbo',
+        model: 'GigaChat-Pro',
         tools: [
           {
             type: 'function',
@@ -1271,7 +1271,7 @@ describe('resource completions', () => {
               },
             ],
             created: Math.floor(Date.now() / 1000),
-            model: 'gpt-3.5-turbo',
+            model: 'GigaChat-Pro',
             object: 'chat.completion',
           };
         }),
@@ -1327,7 +1327,7 @@ describe('resource completions', () => {
               },
             ],
             created: Math.floor(Date.now() / 1000),
-            model: 'gpt-3.5-turbo',
+            model: 'GigaChat-Pro',
             object: 'chat.completion',
           };
         }),
@@ -1394,7 +1394,7 @@ describe('resource completions', () => {
               },
             ],
             created: Math.floor(Date.now() / 1000),
-            model: 'gpt-3.5-turbo',
+            model: 'GigaChat-Pro',
             object: 'chat.completion',
           };
         }),
@@ -1463,7 +1463,7 @@ describe('resource completions', () => {
       const runner = gigachat.beta.chat.completions.runTools({
         stream: true,
         messages: [{ role: 'user', content: 'tell me what the weather is like' }],
-        model: 'gpt-3.5-turbo',
+        model: 'GigaChat-Pro',
         tools: [
           {
             type: 'function',
@@ -1507,7 +1507,7 @@ describe('resource completions', () => {
               },
             ],
             created: Math.floor(Date.now() / 1000),
-            model: 'gpt-3.5-turbo',
+            model: 'GigaChat-Pro',
             object: 'chat.completion.chunk',
           };
         }),
@@ -1541,7 +1541,7 @@ describe('resource completions', () => {
               id: '2',
               choices: [choice],
               created: Math.floor(Date.now() / 1000),
-              model: 'gpt-3.5-turbo',
+              model: 'GigaChat-Pro',
               object: 'chat.completion.chunk',
             };
           }
@@ -1588,7 +1588,7 @@ describe('resource completions', () => {
         {
           stream: true,
           messages: [{ role: 'user', content: 'tell me what the weather is like' }],
-          model: 'gpt-3.5-turbo',
+          model: 'GigaChat-Pro',
           tools: [
             {
               type: 'function',
@@ -1633,7 +1633,7 @@ describe('resource completions', () => {
             },
           ],
           created: Math.floor(Date.now() / 1000),
-          model: 'gpt-3.5-turbo',
+          model: 'GigaChat-Pro',
           object: 'chat.completion.chunk',
         };
       });
@@ -1676,7 +1676,7 @@ describe('resource completions', () => {
             content: 'can you tell me how many properties are in {"a": 1, "b": 2, "c": 3}',
           },
         ],
-        model: 'gpt-3.5-turbo',
+        model: 'GigaChat-Pro',
         tools: [
           new ParsingToolFunction({
             name: 'numProperties',
@@ -1727,7 +1727,7 @@ describe('resource completions', () => {
               },
             ],
             created: Math.floor(Date.now() / 1000),
-            model: 'gpt-3.5-turbo',
+            model: 'GigaChat-Pro',
             object: 'chat.completion.chunk',
           };
         }),
@@ -1764,7 +1764,7 @@ describe('resource completions', () => {
               id: '2',
               choices: [choice],
               created: Math.floor(Date.now() / 1000),
-              model: 'gpt-3.5-turbo',
+              model: 'GigaChat-Pro',
               object: 'chat.completion.chunk',
             };
           }
@@ -1814,7 +1814,7 @@ describe('resource completions', () => {
             content: 'can you tell me how many properties are in {"a": 1, "b": 2, "c": 3}',
           },
         ],
-        model: 'gpt-3.5-turbo',
+        model: 'GigaChat-Pro',
         tools: [
           new ParsingToolFunction({
             name: 'numProperties',
@@ -1849,7 +1849,7 @@ describe('resource completions', () => {
               id: '1',
               choices: [choice],
               created: Math.floor(Date.now() / 1000),
-              model: 'gpt-3.5-turbo',
+              model: 'GigaChat-Pro',
               object: 'chat.completion.chunk',
             };
           }
@@ -1890,7 +1890,7 @@ describe('resource completions', () => {
               id: '2',
               choices: [choice],
               created: Math.floor(Date.now() / 1000),
-              model: 'gpt-3.5-turbo',
+              model: 'GigaChat-Pro',
               object: 'chat.completion.chunk',
             };
           }
@@ -1949,7 +1949,7 @@ describe('resource completions', () => {
               id: '3',
               choices: [choice],
               created: Math.floor(Date.now() / 1000),
-              model: 'gpt-3.5-turbo',
+              model: 'GigaChat-Pro',
               object: 'chat.completion.chunk',
             };
           }
@@ -2011,7 +2011,7 @@ describe('resource completions', () => {
       const runner = gigachat.beta.chat.completions.runTools({
         stream: true,
         messages: [{ role: 'user', content: 'tell me what the weather is like' }],
-        model: 'gpt-3.5-turbo',
+        model: 'GigaChat-Pro',
         tool_choice: {
           type: 'function',
           function: {
@@ -2060,7 +2060,7 @@ describe('resource completions', () => {
               },
             ],
             created: Math.floor(Date.now() / 1000),
-            model: 'gpt-3.5-turbo',
+            model: 'GigaChat-Pro',
             object: 'chat.completion.chunk',
           };
         }),
@@ -2097,7 +2097,7 @@ describe('resource completions', () => {
       const runner = gigachat.beta.chat.completions.runTools({
         stream: true,
         messages: [{ role: 'user', content: 'tell me what the weather is like' }],
-        model: 'gpt-3.5-turbo',
+        model: 'GigaChat-Pro',
         tools: [
           {
             type: 'function',
@@ -2140,7 +2140,7 @@ describe('resource completions', () => {
               },
             ],
             created: Math.floor(Date.now() / 1000),
-            model: 'gpt-3.5-turbo',
+            model: 'GigaChat-Pro',
             object: 'chat.completion.chunk',
           };
         }),
@@ -2194,7 +2194,7 @@ describe('resource completions', () => {
               },
             ],
             created: Math.floor(Date.now() / 1000),
-            model: 'gpt-3.5-turbo',
+            model: 'GigaChat-Pro',
             object: 'chat.completion.chunk',
           };
         }),
@@ -2249,7 +2249,7 @@ describe('resource completions', () => {
               id: '3',
               choices: [choice],
               created: Math.floor(Date.now() / 1000),
-              model: 'gpt-3.5-turbo',
+              model: 'GigaChat-Pro',
               object: 'chat.completion.chunk',
             };
           }
@@ -2321,7 +2321,7 @@ describe('resource completions', () => {
       const runner = gigachat.beta.chat.completions.stream({
         stream: true,
         messages: [{ role: 'user', content: 'tell me what the weather is like' }],
-        model: 'gpt-3.5-turbo',
+        model: 'GigaChat-Pro',
       });
 
       const listener = new StreamingRunnerListener(runner);
@@ -2334,7 +2334,7 @@ describe('resource completions', () => {
               id: '1',
               choices: [choice],
               created: Math.floor(Date.now() / 1000),
-              model: 'gpt-3.5-turbo',
+              model: 'GigaChat-Pro',
               object: 'chat.completion.chunk',
             };
           }
@@ -2359,7 +2359,7 @@ describe('resource completions', () => {
       const runner = gigachat.beta.chat.completions.stream({
         stream: true,
         messages: [{ role: 'user', content: 'tell me what the weather is like' }],
-        model: 'gpt-3.5-turbo',
+        model: 'GigaChat-Pro',
       });
 
       const proxied = ChatCompletionStreamingRunner.fromReadableStream(runner.toReadableStream());
@@ -2373,7 +2373,7 @@ describe('resource completions', () => {
               id: '1',
               choices: [choice],
               created: Math.floor(Date.now() / 1000),
-              model: 'gpt-3.5-turbo',
+              model: 'GigaChat-Pro',
               object: 'chat.completion.chunk',
             };
           }
@@ -2398,7 +2398,7 @@ describe('resource completions', () => {
       const stream = gigachat.beta.chat.completions.stream(
         {
           max_tokens: 1024,
-          model: 'gpt-3.5-turbo',
+          model: 'GigaChat-Pro',
           messages: [{ role: 'user', content: 'Say hello there!' }],
         },
         { maxRetries: 0 },
@@ -2422,7 +2422,7 @@ describe('resource completions', () => {
       const stream = gigachat.beta.chat.completions.stream(
         {
           max_tokens: 1024,
-          model: 'gpt-3.5-turbo',
+          model: 'GigaChat-Pro',
           messages: [{ role: 'user', content: 'Say hello there!' }],
         },
         { maxRetries: 0 },

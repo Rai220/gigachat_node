@@ -33,7 +33,7 @@ app.post('/', async (req: Request, res: Response) => {
     console.log('Received request:', req.body);
 
     const stream = await gigachat.chat.completions.create({
-      model: 'gpt-3.5-turbo',
+      model: 'GigaChat-Pro',
       stream: true,
       messages: [{ role: 'user', content: req.body }],
     });

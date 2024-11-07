@@ -10,7 +10,7 @@ const client = new GigaChat({
 
 describe('resource assistants', () => {
   test('create: only required params', async () => {
-    const responsePromise = client.beta.assistants.create({ model: 'gpt-4o' });
+    const responsePromise = client.beta.assistants.create({ model: 'GigaChat-Pro' });
     const rawResponse = await responsePromise.asResponse();
     expect(rawResponse).toBeInstanceOf(Response);
     const response = await responsePromise;
@@ -22,7 +22,7 @@ describe('resource assistants', () => {
 
   test('create: required and optional params', async () => {
     const response = await client.beta.assistants.create({
-      model: 'gpt-4o',
+      model: 'GigaChat-Pro',
       description: 'description',
       instructions: 'instructions',
       metadata: {},

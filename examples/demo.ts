@@ -8,14 +8,14 @@ const gigachat = new GigaChat();
 async function main() {
   // Non-streaming:
   const completion = await gigachat.chat.completions.create({
-    model: 'gpt-4',
+    model: 'GigaChat-Pro',
     messages: [{ role: 'user', content: 'Say this is a test' }],
   });
   console.log(completion.choices[0]?.message?.content);
 
   // Streaming:
   const stream = await gigachat.chat.completions.create({
-    model: 'gpt-4',
+    model: 'GigaChat-Pro',
     messages: [{ role: 'user', content: 'Say this is a test' }],
     stream: true,
   });

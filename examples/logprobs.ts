@@ -8,7 +8,7 @@ const gigachat = new GigaChat();
 async function main() {
   const stream = await gigachat.beta.chat.completions
     .stream({
-      model: 'gpt-4',
+      model: 'GigaChat-Pro',
       messages: [{ role: 'user', content: 'Say this is a test' }],
       stream: true,
       logprobs: true,

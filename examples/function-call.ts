@@ -76,7 +76,7 @@ async function main() {
 
   while (true) {
     const completion = await gigachat.chat.completions.create({
-      model: 'gpt-3.5-turbo',
+      model: 'GigaChat-Pro',
       messages,
       functions: functions,
     });

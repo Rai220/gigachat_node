@@ -7,7 +7,7 @@ const gigachat = new GigaChat();
 async function main() {
   const runner = gigachat.beta.chat.completions
     .stream({
-      model: 'gpt-3.5-turbo',
+      model: 'GigaChat-Pro',
       messages: [{ role: 'user', content: 'Say this is a test' }],
     })
     .on('message', (msg) => console.log(msg))

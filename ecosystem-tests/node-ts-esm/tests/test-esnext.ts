@@ -47,7 +47,7 @@ expect.extend({
 it(`raw response`, async function () {
   const response = await client.chat.completions
     .create({
-      model: 'gpt-4',
+      model: 'GigaChat-Pro',
       messages: [{ role: 'user', content: 'Say this is a test' }],
     })
     .asResponse();

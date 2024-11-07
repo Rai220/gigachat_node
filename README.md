@@ -39,7 +39,7 @@ const client = new GigaChat({
 async function main() {
   const chatCompletion = await client.chat.completions.create({
     messages: [{ role: 'user', content: 'Say this is a test' }],
-    model: 'gpt-3.5-turbo',
+    model: 'GigaChat-Pro',
   });
 }
 
@@ -57,7 +57,7 @@ const client = new GigaChat();
 
 async function main() {
   const stream = await client.chat.completions.create({
-    model: 'gpt-4',
+    model: 'GigaChat-Pro',
     messages: [{ role: 'user', content: 'Say this is a test' }],
     stream: true,
   });
@@ -87,7 +87,7 @@ const client = new GigaChat({
 async function main() {
   const params: GigaChat.Chat.ChatCompletionCreateParams = {
     messages: [{ role: 'user', content: 'Say this is a test' }],
-    model: 'gpt-3.5-turbo',
+    model: 'GigaChat-Pro',
   };
   const chatCompletion: GigaChat.Chat.ChatCompletion = await client.chat.completions.create(params);
 }
@@ -173,7 +173,7 @@ const gigachat = new GigaChat();
 
 async function main() {
   const stream = await gigachat.beta.chat.completions.stream({
-    model: 'gpt-4',
+    model: 'GigaChat-Pro',
     messages: [{ role: 'user', content: 'Say this is a test' }],
     stream: true,
   });
@@ -226,7 +226,7 @@ const client = new GigaChat();
 async function main() {
   const runner = client.beta.chat.completions
     .runTools({
-      model: 'gpt-3.5-turbo',
+      model: 'GigaChat-Pro',
       messages: [{ role: 'user', content: 'How is the weather this week?' }],
       tools: [
         {
@@ -333,7 +333,7 @@ a subclass of `APIError` will be thrown:
 ```ts
 async function main() {
   const job = await client.fineTuning.jobs
-    .create({ model: 'gpt-3.5-turbo', training_file: 'file-abc123' })
+    .create({ model: 'GigaChat-Pro', training_file: 'file-abc123' })
     .catch(async (err) => {
       if (err instanceof GigaChat.APIError) {
         console.log(err.status); // 400
@@ -368,7 +368,7 @@ Error codes are as followed:
 All object responses in the SDK provide a `_request_id` property which is added from the `x-request-id` response header so that you can quickly log failing requests and report them back to GigaChat.
 
 ```ts
-const completion = await client.chat.completions.create({ messages: [{ role: 'user', content: 'Say this is a test' }], model: 'gpt-4' });
+const completion = await client.chat.completions.create({ messages: [{ role: 'user', content: 'Say this is a test' }], model: 'GigaChat-Pro' });
 console.log(completion._request_id) // req_123
 ```
 
@@ -415,7 +415,7 @@ const client = new GigaChat({
 });
 
 // Or, configure per-request:
-await client.chat.completions.create({ messages: [{ role: 'user', content: 'How can I get the name of the current day in Node.js?' }], model: 'gpt-3.5-turbo' }, {
+await client.chat.completions.create({ messages: [{ role: 'user', content: 'How can I get the name of the current day in Node.js?' }], model: 'GigaChat-Pro' }, {
   maxRetries: 5,
 });
 ```
@@ -432,7 +432,7 @@ const client = new GigaChat({
 });
 
 // Override per-request:
-await client.chat.completions.create({ messages: [{ role: 'user', content: 'How can I list all files in a directory using Python?' }], model: 'gpt-3.5-turbo' }, {
+await client.chat.completions.create({ messages: [{ role: 'user', content: 'How can I list all files in a directory using Python?' }], model: 'GigaChat-Pro' }, {
   timeout: 5 * 1000,
 });
 ```
@@ -485,13 +485,13 @@ You can also use the `.withResponse()` method to get the raw `Response` along wi
 const client = new GigaChat();
 
 const response = await client.chat.completions
-  .create({ messages: [{ role: 'user', content: 'Say this is a test' }], model: 'gpt-3.5-turbo' })
+  .create({ messages: [{ role: 'user', content: 'Say this is a test' }], model: 'GigaChat-Pro' })
   .asResponse();
 console.log(response.headers.get('X-My-Header'));
 console.log(response.statusText); // access the underlying Response object
 
 const { data: chatCompletion, response: raw } = await client.chat.completions
-  .create({ messages: [{ role: 'user', content: 'Say this is a test' }], model: 'gpt-3.5-turbo' })
+  .create({ messages: [{ role: 'user', content: 'Say this is a test' }], model: 'GigaChat-Pro' })
   .withResponse();
 console.log(raw.headers.get('X-My-Header'));
 console.log(chatCompletion);

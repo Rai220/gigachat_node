@@ -8,7 +8,7 @@ const gigachat = new GigaChat();
 async function main() {
   // Explicit non streaming params type:
   const params: GigaChat.Chat.CompletionCreateParams = {
-    model: 'gpt-4',
+    model: 'GigaChat-Pro',
     messages: [{ role: 'user', content: 'Say this is a test!' }],
   };
   const completion = await gigachat.chat.completions.create(params);
@@ -16,7 +16,7 @@ async function main() {
 
   // Explicit streaming params type:
   const streaming_params: GigaChat.Chat.CompletionCreateParams = {
-    model: 'gpt-4',
+    model: 'GigaChat-Pro',
     messages: [{ role: 'user', content: 'Say this is a test!' }],
     stream: true,
   };

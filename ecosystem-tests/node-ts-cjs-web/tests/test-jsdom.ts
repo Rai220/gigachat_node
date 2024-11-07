@@ -61,7 +61,7 @@ expect.extend({
 
 test(`basic request works`, async function () {
   const completion = await client.chat.completions.create({
-    model: 'gpt-4',
+    model: 'GigaChat-Pro',
     messages: [{ role: 'user', content: 'Say this is a test' }],
   });
   expect(completion.choices[0]?.message?.content).toBeSimilarTo('This is a test', 10);
@@ -71,7 +71,7 @@ test(`basic request works`, async function () {
 it.skip(`raw response`, async function () {
   const response = await client.chat.completions
     .create({
-      model: 'gpt-4',
+      model: 'GigaChat-Pro',
       messages: [{ role: 'user', content: 'Say this is a test' }],
     })
     .asResponse();
@@ -104,7 +104,7 @@ it.skip(`raw response`, async function () {
 // response bodies aren't working with the chosen polyfills
 it.skip(`streaming works`, async function () {
   const stream = await client.chat.completions.create({
-    model: 'gpt-4',
+    model: 'GigaChat-Pro',
     messages: [{ role: 'user', content: 'Say this is a test' }],
     stream: true,
   });

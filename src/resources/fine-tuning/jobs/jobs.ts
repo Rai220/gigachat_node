@@ -306,7 +306,7 @@ export interface JobCreateParams {
    * The name of the model to fine-tune. You can select one of the
    * [supported models](https://platform.gigachat.com/docs/guides/fine-tuning#which-models-can-be-fine-tuned).
    */
-  model: (string & {}) | 'babbage-002' | 'davinci-002' | 'gpt-3.5-turbo' | 'gpt-4o-mini';
+  model: (string & {}) | 'babbage-002' | 'davinci-002' | 'GigaChat-Pro' | 'gpt-4o-mini';
 
   /**
    * The ID of an uploaded file that contains training data.

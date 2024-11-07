@@ -26,7 +26,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const gigachat = new GigaChat();
 
   const stream = gigachat.beta.chat.completions.stream({
-    model: 'gpt-3.5-turbo',
+    model: 'GigaChat-Pro',
     stream: true,
     // @ts-ignore
     messages: [{ role: 'user', content: await req.text() }],
