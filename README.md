@@ -33,7 +33,7 @@ The full API of this library can be found in [api.md file](api.md) along with ma
 import GigaChat from 'gigachat';
 
 const client = new GigaChat({
-  apiKey: process.env['OPENAI_API_KEY'], // This is the default and can be omitted
+  apiKey: process.env['GIGACHAT_TOKEN'], // This is the default and can be omitted
 });
 
 async function main() {
@@ -81,7 +81,7 @@ This library includes TypeScript definitions for all request params and response
 import GigaChat from 'gigachat';
 
 const client = new GigaChat({
-  apiKey: process.env['OPENAI_API_KEY'], // This is the default and can be omitted
+  apiKey: process.env['GIGACHAT_TOKEN'], // This is the default and can be omitted
 });
 
 async function main() {

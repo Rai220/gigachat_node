@@ -182,7 +182,7 @@ type Args = Awaited<ReturnType<typeof parseArgs>>;
 let state: Args & { rootDir: string };
 
 async function main() {
-  if (!process.env['OPENAI_API_KEY']) {
+  if (!process.env['GIGACHAT_TOKEN']) {
     console.error(`Error: The environment variable OPENAI_API_KEY must be set. Run the command
   $echo 'OPENAI_API_KEY = "'"\${OPENAI_API_KEY}"'"' >> ecosystem-tests/cloudflare-worker/wrangler.toml`);
     process.exit(0);

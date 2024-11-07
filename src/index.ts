@@ -107,7 +107,7 @@ import {
 
 export interface ClientOptions {
   /**
-   * Defaults to process.env['OPENAI_API_KEY'].
+   * Defaults to process.env['GIGACHAT_TOKEN'].
    */
   apiKey?: string | undefined;
 
@@ -197,7 +197,7 @@ export class GigaChat extends Core.APIClient {
   /**
    * API Client for interfacing with the GigaChat API.
    *
-   * @param {string | undefined} [opts.apiKey=process.env['OPENAI_API_KEY'] ?? undefined]
+   * @param {string | undefined} [opts.apiKey=process.env['GIGACHAT_TOKEN'] ?? undefined]
    * @param {string | null | undefined} [opts.organization=process.env['OPENAI_ORG_ID'] ?? null]
    * @param {string | null | undefined} [opts.project=process.env['OPENAI_PROJECT_ID'] ?? null]
    * @param {string} [opts.baseURL=process.env['OPENAI_BASE_URL'] ?? https://gigachat.devices.sberbank.ru/api/v1] - Override the default base URL for the API.
@@ -211,7 +211,7 @@ export class GigaChat extends Core.APIClient {
    */
   constructor({
     baseURL = Core.readEnv('OPENAI_BASE_URL'),
-    apiKey = Core.readEnv('OPENAI_API_KEY'),
+    apiKey = Core.readEnv('GIGACHAT_TOKEN'),
     organization = Core.readEnv('OPENAI_ORG_ID') ?? null,
     project = Core.readEnv('OPENAI_PROJECT_ID') ?? null,
     ...opts
