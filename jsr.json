@@ -1,0 +1,10 @@
+{
+  "name": "@gigachat/gigachat",
+  "version": "4.71.1",
+  "exports": "./index.ts",
+  "publish": {
+    "exclude": [
+      "!."
+    ]
+  }
+}
